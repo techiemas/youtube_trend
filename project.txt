@@ -4,6 +4,7 @@ Project Title:- YouTube Data Analysis | END TO END DATA ENGINEERING PROJECT
 
 data link-https://www.kaggle.com/datasets/datasnaek/youtube-new?select=CAvideos.csv
 
+github-->https://github.com/darshilparmar/dataengineering-youtube-analysis-project
 
 To copy data from local to s3 bucket 
 
@@ -70,3 +71,9 @@ def lambda_handler(event, context):
         raise e
 
         
+
+        # join query 
+
+        SELECT * FROM "de_youtube_raw"."raw_statistics" a 
+INNER JOIN "db_youtube_cleaned"."cleaned_statistics_refernce_data" b ON a.category_id=cast(b.id as int);
+ 
